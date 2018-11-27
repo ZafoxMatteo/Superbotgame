@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 var prefix = "!";
 
-client.login("process.env.BOT_TOKEN");
+client.login(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
     console.log("---------------------------")
@@ -19,7 +19,7 @@ client.on(`message`, async message => {
             message.channel.send(":gear: Redemarrage en cours...")
             client.destroy()
             
-            client.login('NTE1MjQyNDIzNTIyMjk1ODI5.Dtsv8A.fD5pFcyT8o1oWipSlY5Gn3Z2kgU')
+            client.login(process.env.BOT_TOKEN)
             message.channel.send(":gear: Redemarrage terminé !")}
             else {
                 message.channel.send(':x: Vous ne disposez pas des permissions nécessaires pour effectuer cette commande !')
